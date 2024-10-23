@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/yaml": "^7.0",
+        "twig/twig": "^3.10",
+        "twig/extra-bundle": "^3.10",
+        "symfony/twig-bundle": "*",
+        "symfony/twig-bridge": "*"
+    },
+    "require-dev": {
+        "symfony/symfony": "^7.0"
+    }
+}

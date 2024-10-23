@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+            <link rel="stylesheet" href="{{ asset('build/style.css') }}" type="text/css">
+    </head>
+    <body>
+            <ul class="navbarmain">
+                <li class="navbarli"><a href="{{ path('app_home') }}">Home</a></li>
+{#                <li class="navbarli"><a href="{{ path('app_players_overview') }}">Players</a></li>#}
+                <li class="navbarli"><a href="{{ path('app_track_type') }}">Tracks</a></li>
+                <li class="navbarli"><a href="/{{ app.user ? 'logout' : 'login' }}">{{ app.user ? 'Logout' : 'Login' }}</a></li>
+            </ul>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

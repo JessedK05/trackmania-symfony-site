@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="background-img">
+        <div class="upload-form-container">
+            <div class="background-upload" >
+                <h3 class="h3-upload">Upload Track</h3>
+                {{ form_start(uploadTrackForm) }}
+                <div>
+                    <div>
+                        {{ form_row(uploadTrackForm.title, {'attr': {'class': 'title-input-class upload-inputs'}}) }}
+                    </div>
+                    <div class=" upload-inputs">
+                        {{ form_row(uploadTrackForm.description, {'attr': {'class': 'descriptionUpload ', 'style': 'height: 100px; width: 200px;'}}) }}
+                    </div>
+                    <div class="uplPlaylist">
+                        {{ form_row(uploadTrackForm.AuthorTime, {'attr': {'class': 'upload-inputs'}}) }}
+                        {{ form_row(uploadTrackForm.Difficulty, {'attr': {'class': 'upload-inputs'}}) }}
+                        {{ form_row(uploadTrackForm.tracktype, {'attr': {'class': 'upload-inputs'}}) }}
+                        <p class="upload-inputs" style="font-size: medium">Recommended Image aspect-ratio 1:1</p>
+                        {{ form_row(uploadTrackForm.Image, {'attr': {'class': 'upload-inputs'}}) }}
+                        {{ form_row(uploadTrackForm.Replay, {'attr': {'class': 'upload-inputs'}}) }}
+                        <div class="hidden">
+                            {{ form_row(uploadTrackForm.author) }}
+                        </div>
+                        {{ form_row(uploadTrackForm.upload, { 'attr' : {'class': 'upload-btn'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(uploadTrackForm) }}
+{% endblock %}

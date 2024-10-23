@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppRouteController!{% endblock %}
+
+{% block body %}
+{#        <img src="{{ asset('images/badfon-trackmania-gonka-mashiny-2979.jpg') }}" alt="background image" />#}
+        <div class="background-img">
+            <div class="home-main-message">
+                <h1 class="home-message">Welcome to Trackify</h1>
+                <h3>The site for your Trackmania records!</h3>
+            </div>
+            <div class="home-main">
+                <div class="home-background">
+                    <h5>Are you ready to take your TrackMania experience to the next level? At Trackify, we're all about the thrill of the race, the perfection of the track, and the pursuit of excellence. Whether you're a seasoned pro or a new racer looking to improve your skills, our platform offers everything you need to enhance your TrackMania adventure.</h5>
+                </div>
+                <div class="home-background">
+                    <h3>Upload and Share Your Tracks</h3>
+                    <hr>
+                    <h5>Create, share, and explore! Our community thrives on creativity and competition. Upload your custom tracks and challenge others to beat your best times. Browse a vast collection of user-created tracks and discover new challenges that push your skills to the limit.</h5>
+                </div>
+                <div class="home-background">
+                    <h3>Compete with Replays!</h3>
+                    <hr>
+                    <h5>Think you've mastered a track? Prove it! Upload your best replays and see how you stack up against racers from around the globe. Watch others' replays to learn new techniques, optimize your racing lines, and discover the secrets to shaving off those precious milliseconds.</h5>
+                </div>
+                <div class="home-background">
+                    <h3>Get Started Today!</h3>
+                    <hr>
+                    <h5>Ready to jump in? Sign up now and start uploading your tracks and replays. Explore new challenges, improve your racing skills, and join a community that lives for the thrill of the race. At TrackMania Central, every second counts. Let's race!</h5>
+                    <a class="home-click" href="{{ path('app_register') }}">Sign up!</a>
+                </div>
+            </div>
+        </div>
+{% endblock %}

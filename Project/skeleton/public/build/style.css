@@ -1,0 +1,333 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-img{
+    background: url("../images/badfon-trackmania-gonka-mashiny-2979.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.replay-card{
+    display: flex;
+    align-items: center;
+    width: 1024px;
+    justify-content: space-around;
+    background: #8b8b8b;
+    border-radius: 10px;
+    border: 3px solid #454545;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.replay-container{
+    padding-bottom: 15px;
+
+}
+
+.track-overview-right{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.track-overview-description{
+    background-color: dimgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.track-overview-left{
+    color: white;
+    background-color: #424242;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 45%;
+    height: 400px;
+    padding: 10px;
+}
+.track-overview-img{
+    border-radius: 10px;
+}
+.track-overview-dwnbtn{
+    border: 2px solid #3c3737;
+    margin-top: 15px;
+    background-color: #717171;
+    padding: 10px;
+    border-radius: 10px;
+    place-self: center;
+}
+.track-overview-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #717171;
+    width: 100%;
+    height: 100%;
+    max-height: 1500px;
+    max-width: 1025px;
+    margin: 50px;
+    justify-content: space-between;
+    padding: 15px;
+    border: 3px solid #3c3737;
+    border-radius: 10px;
+}
+.center-track-overview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.track-selection-title{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+.track-card{
+    overflow: hidden;
+    margin: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+.track-card p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.track-overview-dwnbtn:hover{
+    transform: scale(1.1);
+    background-color: dodgerblue;
+}
+.track-card:hover{
+    transform: scale(1.1);
+}
+
+.home-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-click{
+    background-color: #8b8b8b;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.home-click:hover{
+    background-color: #1d6dba;
+}
+
+.home-background{
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 25px;
+    font-size: larger;
+    margin-bottom: 15px;
+}
+
+.home-main-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-message{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarli {
+    display: inline;
+    margin: 15px;
+}
+
+.navbarmain {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.loginform-placement{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.click-here-button{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+.click-here-button:hover{
+    transform: scale(1.1);
+}
+
+.track-selection-card{
+    max-height: 470px;
+    height: auto;
+    max-width: 400px;
+    width: auto;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.track-selection-card h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-selection-card-image{
+    max-height: 400px;
+    max-width: 400px;
+    height: auto;
+    width: auto;
+}
+.track-selection-card-container{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 67px;
+}
+.upload-button-track-button{
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    position: relative;
+    margin-left: 180px;
+    margin-right: 180px;
+    padding: 5px;
+    border: 3px solid #454545;
+    border-radius: 10px;
+}
+.upload-button-track-button:hover{
+    transform: scale(102%);
+    background-color:  #1d6dba;
+}
+.track-selection-player-card:hover{
+    transform: scale(102%);
+    background-color: #1d6dba;
+}
+.track-selection-player-card{
+    background-color: #8b8b8b;
+    border: 3px solid #454545;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-track-page:hover{
+    color: #1d6dba;
+}
+
+.profile-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b8b8b;
+    border: 3px solid #454545;
+    border-radius: 10px;
+    color: white;
+    width: 1024px;
+    flex-direction: column;
+}
+
+.track-selection-player{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+.track-selection-card-content{
+    margin-right: 15px;
+}
+
+.upload-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+}
+
+.h3-upload{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.title-input-class{
+}
+
+.background-upload{
+    background-color: #8b8b8b;
+    border: 3px solid #454545;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+textarea{
+    resize: none;
+}
+.upload-inputs{
+    margin-top: 20px;
+}
+
+.descriptionUpload{
+    display: flex;
+}
+
+.upload-btn:hover{
+    transform: scale(110%);
+    background-color:  #1d6dba;
+}
+.upload-btn{
+    padding: 15px;
+    border: 3px solid #454545;
+    border-radius: 10px;
+    color: white;
+    background: #8b8b8b;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.upload-replay-container{
+    background: #8b8b8b;
+    border-radius: 10px;
+    border: 3px solid #454545;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    max-width: 1025px;
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="background-img">
+        <div class="center-track-overview">
+            <div class="track-overview-main">
+
+                <div class="track-overview-left">
+                    <h2>{{ track.title }}</h2>
+                    <div>
+                        <h4>Description</h4>
+                        <div>
+                            <h5 class="track-overview-description">{{ track.description }}</h5>
+                        </div>
+                    </div>
+                    <h5>Author Time: {{ track.AuthorTime|date|slice(16,22) }}</h5>
+                    <h5>Difficulty: {{ track.Difficulty }}</h5>
+                    <h5>Type: {{ track.tracktype }}</h5>
+                    <a class="author-track-page" href="{{ path('app_profile', {'id': track.author.id}) }}">Made by: {{ track.author.username }}</a>
+                </div>
+                <div class="track-overview-right">
+                    <a class="track-overview-dwnbtn" href="{{ asset('build/uploads/tracks/replays/' ~ track.Replay()) }}"
+                       download="{{ asset('build/uploads/tracks/replays/' ~ track.Replay()) }}">Download track</a>
+
+                    <img class="track-overview-img" style="font-size: large" width="400px" height="400px" alt="{{ track.title }}"
+                         src="{{ asset('build/uploads/tracks/images/' ~ track.Image()) }}"/>
+                </div>
+            </div>
+        </div>
+        {% if is_granted('ROLE_USER') %}
+        <div class="center-track-overview">
+            <div class="upload-replay-container">
+                {{ form_start(ReplayForm) }}
+                {{ form_row(ReplayForm.Replay) }}
+                {{ form_row(ReplayForm.TimeSet) }}
+                <div class="hidden">
+                    {{ form_widget(ReplayForm.user) }}
+                </div>
+                {{ form_row(ReplayForm.upload) }}
+
+                {{ form_end(ReplayForm) }}
+            </div>
+        </div>
+        {% endif %}
+        <div class="center-track-overview">
+            <div class="replay-container">
+                {% for replay in replays %}
+                    {% if replay.track.id == track.id %}
+                        <div class="replay-card">
+                            <p>Time: {{ replay.timeSet|date|slice(16,22) }}</p>
+                            <a class="author-track-page" href="{{ path('app_profile', {'id': track.author.id}) }}">By: {{ replay.user.username }}</a>
+                            <a class="track-overview-dwnbtn" href="{{ asset('build/uploads/tracks/trackreplays/' ~ replay.Replay()) }}"
+                               download="{{ asset('build/uploads/tracks/trackreplays/' ~ replay.Replay()) }}" style="margin: 0">Download Replay</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

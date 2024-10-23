@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="background-img">
+    <h2 class="track-selection-title">Pick a side</h2>
+    <div class="track-selection-card-container">
+        <a href="{{ path('app_tracks_campaign') }}" class="track-selection-card">
+            <img class="track-selection-card-image" alt="" src="{{ asset('images/PlaceholderLC.png') }}" />
+            <h4>Campaign</h4>
+        </a>
+        <a href="{{ path('app_tracks_player') }}" class="track-selection-card">
+            <img class="track-selection-card-image" alt="" src="{{ asset('images/PlaceholderLC.png') }}" />
+            <h4>Player Made</h4>
+        </a>
+    </div>
+</div>
+{% endblock %}

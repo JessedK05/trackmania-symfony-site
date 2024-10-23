@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if user.playerTracks|length <3 %}
+        <div class="background-img" style="height: 100vh">
+    {% else %}
+    <div class="background-img">
+    {% endif%}
+        <div class="center-track-overview" style="padding: 25px;">
+            <div class="profile-header">
+                <p>Tracks by: {{ user.username }}</p>
+                <p>Track amount: {{ user.playerTracks|length }}</p>
+            </div>
+        </div>
+        {% for track in tracks %}
+            {% if track.author.id == user.id %}
+                <div class="track-selection-player">
+                    <a class="track-selection-player-card" href="{{ path('app_tracks_player_unique', {'id': track.id}) }}">
+                        <h5 class="track-selection-card-content">{{ track.title }}</h5>
+                        <h5 class="track-selection-card-content">By: {{ track.author.username }}</h5>
+                        <h5 class="track-selection-card-content">Time: {{ track.authorTime|date|slice(16,22) }}</h5>
+                        <h5 class="track-selection-card-content">Difficulty: {{ track.difficulty }}</h5>
+                        <h5 class="track-selection-card-content">Type: {{ track.tracktype }}</h5>
+                        <img style="font-size: large" width="100px" height="100px" alt="{{ track.title }}"
+                             src="{{ asset('build/uploads/tracks/images/' ~ track.image()) }}"/>
+                    </a>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
